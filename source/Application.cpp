@@ -46,6 +46,8 @@ Application::Application(){
 
     oMap = new Map(rR);
 
+    
+
     // 初始化一些键值
     this->keyMenuPressed = this->movePressed = false;
     this->keyA = this->keyW = this->keyD = this->keyShift = false;
@@ -70,5 +72,5 @@ Application::~Application(){
 }
 
 void Application::mainloop(){
-    
+
 }
