@@ -1,5 +1,5 @@
+# include "headers.h"
 # include "Application.h"
-# include <cstdio>
 int main(){
     Application app;
     app.mainloop();
