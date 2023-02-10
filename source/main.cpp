@@ -1,8 +1,10 @@
-# include "headers.h"
-# include "Application.h"
-int main(){
-    Application app;
-    app.mainloop();
-    printf("Here is the end of program!\n");
-    return 0;
+#include "Application.h"
+
+int main(int argc, char *argv[])
+{
+	Application app;
+	
+	app.mainLoop();
+
+	return 0;
 }

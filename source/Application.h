@@ -1,54 +1,60 @@
-# ifndef APPLICATION_HEADERS
-# define APPLICATION_HEADERS
-# include "headers.h"
-# include "Map.h"
+# ifndef CORE_H
+# define CORE_H
+# include<SDL2/SDL.h>
 
-class Application{
+class Application
+{
 private:
-    SDL_Window* window;
-    SDL_Renderer* rR;
-    SDL_Event* mainEvent;
+	SDL_Window* window;
+	SDL_Renderer* rR;
+	SDL_Event* mainEvent;
 
-    // FPS 
-    long frameTime;
-    static const int MIN_FRAME_TIME = 16;
+	// ----- FPS -----
 
-    unsigned long lFPSTime;
-    int iNumOfFPS,iFPS;
+	long frameTime;
+	static const int MIN_FRAME_TIME = 16;
 
-    // INPUT
-    static bool movePressed,keyMenuPressed,keyS,keyW,keyA,keyD,keyShift;
-    static bool keyAPressed,keyDPressed;
+	unsigned long lFPSTime;
+	int iNumOfFPS, iFPS;
 
-    // true = RIGHT, false = LEFT
-    bool firstDir;
+	// ----- FPS -----
 
-    static Map* oMap;
+	// ----- INPUT
+	static bool movePressed, keyMenuPressed, keyS, keyW, keyA, keyD, keyShift;
 
-    // Methods
-    void Input();
-    void MouseInput();
-    void InputPlayer();
-    void InputMenu();
+	static bool keyAPressed, keyDPressed;
+	// ----- true = RIGHT, false = LEFT
+	bool firstDir;
 
+	// ----- INPUT
+
+	//static Map* oMap;
+
+	// ----- Methods
+
+	void Input();
+	void MouseInput();
+	void InputPlayer();
+	void InputMenu();
 public:
-    Application();
-    ~Application();
-    void mainloop();
+	Application(void);
+	~Application(void);
 
-    static bool quitGame;
+	static bool quitGame;
 
-    void Update();
-    void Draw();
-    
-    void resetMove();
-    static void resetKeys();
+	void mainLoop();
 
-    static bool mouseLeftPressed,mouseRightPressed;
-    static int mouseX,mouseY;
+	void Update();
+	void Draw();
 
-    /* ----- get & set ----- */
-    static Map* getMap();
+	void resetMove();
+	static void resetKeys();
+
+	static bool mouseLeftPressed, mouseRightPressed;
+	static int mouseX, mouseY;
+	
+	/* ----- get & set ----- */
+	//static Map* getMap();
 };
 
-# endif
+#endif
