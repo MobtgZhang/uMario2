@@ -80,16 +80,14 @@ void AboutMenu::Update() {
 }
 
 void AboutMenu::Draw(SDL_Renderer* rR) {
-	CCFG::getText()->DrawWS(rR, "MARIO V 1.03 - C++ AND SDL2", 150, 128, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "AUTOR: LUKASZ JAKOWSKI", 150, 146, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "MARIO 2.0 V 1.0 - C++ AND SDL2", 150, 128, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "AUTHOR: MOBTGZHANG", 150, 146, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "MODIFIED IN YEAR OF 2023", 150, 188, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "THIS IS ALSO THE TESTING PAGE.", 150, 206, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "WELCOME VISIT MY GITHUB PAGE:", 150, 224, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, "MOBTGZHANG.GITHUB.IO", 150, 264, 0, 0, 0);
 
-	CCFG::getText()->DrawWS(rR, "INFORMATYKA INZ 2012-2016", 150, 188, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "UNIWERSYTET SLASKI W KATOWICACH", 150, 206, 0, 0, 0);
-	CCFG::getText()->DrawWS(rR, "MAJ 2014", 150, 224, 0, 0, 0);
-
-	CCFG::getText()->DrawWS(rR, "WWW.LUKASZJAKOWSKI.PL", 150, 264, 0, 0, 0);
-
-	//CCFG::getText()->DrawWS(rR, std::to_string(iNumOfUnits), 5, CCFG::GAME_HEIGHT - 21, 0, 0, 0);
+	CCFG::getText()->DrawWS(rR, std::to_string(iNumOfUnits), 5, CCFG::GAME_HEIGHT - 21, 0, 0, 0);
 
 	for(unsigned int i = 0; i < lMO.size(); i++) {
 		CCFG::getText()->DrawWS(rR, lMO[i]->getText(), lMO[i]->getXPos(), lMO[i]->getYPos(), 0, 0, 0);

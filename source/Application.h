@@ -28,7 +28,7 @@ private:
 
 	// ----- INPUT
 
-	//static Map* oMap;
+	static Map* oMap;
 
 	// ----- Methods
 
@@ -54,7 +54,7 @@ public:
 	static int mouseX, mouseY;
 	
 	/* ----- get & set ----- */
-	//static Map* getMap();
+	static Map* getMap();
 };
 
 #endif

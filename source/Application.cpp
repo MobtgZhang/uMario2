@@ -1,12 +1,13 @@
-#include "Application.h"
-#include "CImg.h"
-#include "CFG.h"
-#include "Text.h"
-#include <SDL2/SDL_mixer.h>
+# include "Application.h"
+# include "CImg.h"
+# include "CFG.h"
+# include "Text.h"
+# include "Map.h"
+# include <SDL2/SDL_mixer.h>
 
 /* ******************************************** */
 
-//Map* Application::oMap = new Map();
+Map* Application::oMap = new Map();
 bool Application::mouseLeftPressed = false;
 bool Application::mouseRightPressed = false;
 int Application::mouseX = 0;
@@ -52,7 +53,7 @@ Application::Application(void) {
 	
 	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	
-	// oMap = new Map(rR);
+	oMap = new Map(rR);
 	CCFG::getMM()->setActiveOption(rR);
 	CCFG::getSMBLOGO()->setImg("super_mario_bros", rR);
 	CCFG::getText()->setFont(rR,"font");
@@ -369,8 +370,7 @@ void Application::Draw() {
 void Application::resetMove() {
 	this->keyAPressed = this->keyDPressed = false;
 }
-/*
+
 Map* Application::getMap() {
 	return oMap;
 }
-*/
